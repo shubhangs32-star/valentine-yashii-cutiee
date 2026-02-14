@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine Yashii Cutiee</title>
+</head>
+<body>
+    <h1>Valentine Yashii Cutiee</h1>
+    <div id="q1">
+        <p>Do you love me?</p>
+        <button onclick="nextQuestion('q3')">Yes 😍</button>
+        <button onclick="nextQuestion('q2')">No 😢</button>
+    </div>
+    <div id="q3" style="display:none;">
+        <p>Will you be my Valentine...?</p>
+        <button onclick="submitResponse()">Yes</button>
+        <button onclick="submitResponse()">No</button>
+    </div>
+    <script>
+        function nextQuestion(questionId) {
+            document.querySelectorAll('div').forEach(div => div.style.display = 'none');
+            document.getElementById(questionId).style.display = 'block';
+        }
+        function submitResponse() {
+            alert('Response submitted!');
+        }
+    </script>
+</body>
+</html>
